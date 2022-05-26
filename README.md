@@ -1,4 +1,4 @@
-# Period
+# Period Tracker
 
 This project's purpose is to make a period tracker focused on privacy and safe data. 
 
