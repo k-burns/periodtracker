@@ -18,4 +18,18 @@ defmodule Period.TrackerFixtures do
 
     symptom
   end
+
+  def cycle_fixture(attrs \\ %{}) do
+    {:ok, cycle} =
+      attrs
+      |> Enum.into(%{
+        ovulating_window: ["2022-01-01", "2022-01-15"],
+        menstration_window: ["2022-01-22", "2022-01-30"],
+        start_date: "2022-01-01",
+        end_date: "2022-01-30"
+      })
+      |> Period.Tracker.Cycle.create_cycle()
+
+    cycle
+  end
 end

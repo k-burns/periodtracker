@@ -11,7 +11,7 @@ defmodule PeriodWeb.Mutations.Tracker.CreateSymptomTest do
   }
   """
 
-  describe "Resolvers.Library.create_symptom/3" do
+  describe "Resolvers.Symptoms.create_symptom/3" do
     test "creates a symptom" do
 
       input = %{

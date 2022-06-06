@@ -2,7 +2,7 @@ defmodule PeriodWeb.Queries.Sumptom.SymptomsTest do
   use PeriodWeb.ConnCase, async: true
 
   describe "Resolvers.Symptoms.list_symptoms/3" do
-    test "returns all symptoms if no criteria is given" do
+    test "returns all symptoms" do
       query = """
       query Symptoms {
         symptoms {
