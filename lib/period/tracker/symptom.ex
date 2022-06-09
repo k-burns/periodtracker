@@ -4,12 +4,15 @@ defmodule Period.Tracker.Symptom do
   alias Period.Repo
 
   alias Period.Tracker.Symptom
+  alias Period.Tracker.Day
 
   schema "symptoms" do
     field :phase, :string
     field :title, :string
     field :recurring, :boolean
     timestamps()
+
+    belongs_to :days, Day
   end
 
   @doc """

@@ -4,6 +4,7 @@ defmodule Period.Tracker.Cycle do
   alias Period.Repo
 
   alias Period.Tracker.Cycle
+  alias Period.Tracker.Day
 
   schema "cycles" do
     field :ovulating_window, {:array, :date}
@@ -12,6 +13,8 @@ defmodule Period.Tracker.Cycle do
     field(:end_date, :date)
     field :current, :boolean, virtual: true
     timestamps()
+
+    has_many :days, Day
   end
 
    @doc """
